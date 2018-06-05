@@ -17,8 +17,9 @@ module.exports = env => ({
             template: appDir + 'index.html'
         }),
         new CopyWebpackPlugin([
-            {from: __dirname + '/web.config', to: buildDir},
-			{from: __dirname + '/app/favicon.ico', to: buildDir}
+						{from: __dirname + '/web.config', to: buildDir}
+						// ,
+						// {from: __dirname + '/app/favicon.ico', to: buildDir}
         ]),
         new webpack.NormalModuleReplacementPlugin(
           /(.*)-APP_TARGET(\.*)/,
@@ -38,17 +39,17 @@ module.exports = env => ({
     },
     module: {
         rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                enforce: 'pre',
-                use: [{
-                    loader: 'eslint-loader',
-                    query: {
-                        configFile: './.eslintrc'
-                    }
-                }]
-            },
+            // {
+            //     test: /\.jsx?$/,
+            //     exclude: /node_modules/,
+            //     enforce: 'pre',
+            //     use: [{
+            //         loader: 'eslint-loader',
+            //         query: {
+            //             configFile: './.eslintrc'
+            //         }
+            //     }]
+            // },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
