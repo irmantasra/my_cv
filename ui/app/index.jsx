@@ -9,6 +9,7 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-r
 
 import './styles.css';
 import reducers from './reducer';
+import Layout from './components/Layout/Layout';
 
 const history = createHistory();
 const middleware = [
@@ -46,7 +47,7 @@ const store = createStore(
 render(
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
-			<h1>Irmantas Ramanauskas cv</h1>
+			<Layout />
 		</ConnectedRouter>
 	</Provider>,
 	document.querySelector('.app')

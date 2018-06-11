@@ -10,6 +10,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^1.2.0",
     "history": "4.7.2",
     "image-webpack-loader": "^4.2.0",
     "jwt-decode": "^2.2.0",
